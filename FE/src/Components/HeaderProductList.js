@@ -11,9 +11,11 @@ function HeaderProductList() {
         skus.push(elements[i].name);
       }
     }
-    axios.post("/products/delete", skus).then(() => {
-      document.location.reload();
-    });
+    if (skus.length !== 0) {
+      axios.post("/products/delete", skus).then(() => {
+        document.location.reload();
+      });
+    }
   };
   return (
     <>
