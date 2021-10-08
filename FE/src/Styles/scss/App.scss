@@ -1,0 +1,57 @@
+@import "custom";
+@import "./header";
+@import "./footer";
+@import "./variables";
+
+body {
+  height: 100%;
+}
+
+.App {
+  min-height: 100vh;
+  position: relative;
+}
+
+.product-container {
+  margin-top: 2rem;
+  padding: 10px;
+  padding-bottom: 60px;
+}
+
+.card {
+  border: 2px solid black;
+
+  .card-header {
+    background: transparent;
+    border: none;
+    padding-bottom: 0;
+
+    .input-group-text {
+      background: transparent;
+      border: none;
+    }
+    .form-check-input {
+      border: 1.5px solid black;
+    }
+  }
+
+  .card-body {
+    text-align: center;
+    padding: 0 1rem 4rem 1rem;
+
+    .card-text {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.product-add-container {
+  width: 460px;
+  text-align: left;
+
+  form {
+    .row {
+      margin: 1rem;
+    }
+  }
+}

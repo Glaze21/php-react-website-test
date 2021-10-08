@@ -1,0 +1,8 @@
+$theme-colors: (
+  "info": tomato,
+  "success": green,
+  "danger": rgb(184, 50, 50),
+);
+
+/* import bootstrap to set changes */
+@import "../../../node_modules/bootstrap/scss/bootstrap";
