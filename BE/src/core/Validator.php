@@ -8,21 +8,7 @@ class Validator
     public function __construct(array $inputs)
     {
         $this->inputs = $inputs;
-
-        switch ($this->inputs["type"]) {
-            case "DVD":
-                $this->validate(new  DVD($this->inputs));
-                break;
-            case "Book":
-                $this->validate(new  Book($this->inputs));
-                break;
-            case "Furniture":
-                $this->validate(new  Furniture($this->inputs));
-                break;
-            default:
-            return response(400, array("error" => "Invalid type provided: ",$this->inputs["type"]));
-                break;
-        }
+        $this->validate(new $this->inputs["type"]($this->inputs));
     }
 
     public function validate(Validate $validate)
